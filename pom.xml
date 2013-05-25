@@ -31,8 +31,8 @@
         </dependency>
         <dependency>
             <groupId>org.xhtmlrenderer</groupId>
-            <artifactId>core-renderer</artifactId>
-            <version>R8</version>
+            <artifactId>flying-saucer-pdf-itext5</artifactId>
+            <version>9.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>

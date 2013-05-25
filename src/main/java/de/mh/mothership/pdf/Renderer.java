@@ -1,10 +1,11 @@
 package de.mh.mothership.pdf;
 
-import com.lowagie.text.DocumentException;
+import com.itextpdf.text.DocumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 
+import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Writer;
 
@@ -20,7 +21,7 @@ public class Renderer {
         renderer.layout();
         try {
             renderer.createPDF(output);
-        } catch (DocumentException e) {
+        } catch (DocumentException | IOException e) {
             propagate(e);
         }
     }
