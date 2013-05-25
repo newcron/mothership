@@ -8,7 +8,7 @@ CSS Style sheets can be embedded in the HTML document.
 
 Once started, the server will listen on Port `33602` for incoming connections.
 
- # Examples:
+# Examples:
  ```
 POST / HTTP/1.1
 Host: localhost:33602
