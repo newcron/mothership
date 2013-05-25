@@ -28,7 +28,7 @@ IDE maven plugin should be able to import this project.
 
 # Running
 
-The main class is `de.mh.mothership.Mothership`
+The main class is `de.mh.mothership.Mothership`. Just run this class and surf to http://localhost:33602
 
 
 # Libraries
