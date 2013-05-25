@@ -8,6 +8,7 @@ public class Mothership {
 
     private static final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(Mothership.class);
     private Injector injector;
+    private WebServer webserver;
 
     public static void main(String... args) {
         final Mothership mothership = new Mothership();
@@ -25,13 +26,14 @@ public class Mothership {
     public void start() {
         LOG.info("Starting Mothership");
         injector = Guice.createInjector(new MothershipModule());
-        injector.getInstance(WebServer.class);
+        webserver = injector.getInstance(WebServer.class);
         LOG.info("Startup Complete");
+        webserver.await();
     }
 
     public void stop() {
         LOG.info("Landing Mothership");
-        injector.getInstance(WebServer.class).stop();
+        webserver.stop();
         LOG.info("Shutdown complete");
         injector = null;
     }
